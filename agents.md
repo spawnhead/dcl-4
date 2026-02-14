@@ -177,5 +177,3 @@ Healthcheck: http://localhost:8080/actuator/health
 2. Создай `docs/SETUP_SPRING_POSTGRES.md`.
 3. Выбери первый экран → сделай parity map → начни имплементацию.
 ```
-
-**Готово!** Этот `AGENTS.md` полностью учитывает твои ответы, репо [github.com/spawnhead/dcl-4](https://github.com/spawnhead/dcl-4) (я заглянул — Spring Boot уже есть, Thymeleaf/Flyway/Postgres логичны), и фокусируется на **локальном запуске для другого ИИ**. Копируй в корень репо — Codex подхватит автоматически.[web:145]
