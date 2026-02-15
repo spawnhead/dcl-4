@@ -1,0 +1,56 @@
+# user Parity Map (draft)
+## Scope
+- Legacy JSP: `src/main/webapp/jsp/user.jsp`.
+- Legacy Struts action mappings: `TBD (no direct input/forward mapping found in struts-config.xml)`
+
+## Form beans
+- `TBD`
+
+## SQL/DAO inventory
+- Candidate DAO classes:
+  - `src/main/java/net/sam/dcl/dao/UserSettingDAO.java`
+  - `src/main/java/net/sam/dcl/dao/UserDAO.java`
+- Candidate SQL resource IDs:
+  - `select-user_settings_login`
+  - `select-user_settings`
+  - `user_setting-load`
+  - `user_setting-update`
+  - `user_setting-insert`
+  - `select-user_links`
+  - `select-users-filter`
+  - `select-users`
+  - `user-insert`
+  - `user-update`
+  - `user-load`
+  - `user-code-load`
+  - `user-load-login`
+  - `user-load-login_pwd`
+  - `select-user-languages`
+  - `insert_user_language`
+  - `update_user_language`
+  - `user-update-block`
+  - `select-contact_person_users`
+  - `select-contractor_user`
+
+## Fields mapping
+| Legacy property | New DTO/Entity | Type | Validation | Readonly cond | Notes |
+|-----------------|----------------|------|------------|---------------|-------|
+| TBD | TBD | TBD | TBD | TBD | Fill during implementation |
+
+## Actions
+| Dispatch/Button | New endpoint | Params | Response |
+|-----------------|-------------|--------|----------|
+| `TBD` | `TBD` | `TBD` | `TBD` |
+
+## Grids
+| Grid ID | Columns | Inline ops | Totals |
+|---------|---------|------------|--------|
+| TBD | TBD | TBD | TBD |
+
+## Print/Export
+| Type | Params | Output format | Parity check |
+|------|--------|---------------|--------------|
+| TBD | TBD | TBD | TBD |
+
+## Status: 0/0 (draft)
+Open issues: ["Complete field-level parity extraction from JSP/Form/Action"]
