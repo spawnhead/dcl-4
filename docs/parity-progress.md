@@ -2,11 +2,11 @@
 
 | Screen | Procs migrated | Status |
 |---|---:|---|
-| Commercial Proposal | 24/231 | ✅ Batch2 in progress: E2E PASS |
-| Orders | 4/231 | 🚧 Filter proc wired, next parity steps pending |
-| Payment | 1/231 | 🚧 Wrapper migrated, service integration pending |
-| Contract | 2/231 | 🚧 Wrapper migrated, service integration pending |
+| Commercial Proposal | 74/231 (global) | ✅ Batch3 verify docs added; service flow wired |
+| Orders | 74/231 (global) | 🚧 Procedure filter wired + verify doc |
+| Users/Login | 74/231 (global) | 🚧 Verify docs + prod profile security baseline |
+| Shipping | 74/231 (global) | 🚧 Verify doc + pending deep service parity |
 
 ## Notes
-- Total migrated procedures in migrations: **24/231** (`V003` + `V004`).
-- Batch2 added wrappers for next high-call legacy procedures so controllers/services can stop direct `EXECUTE PROCEDURE` usage over time.
+- Total SQL-migrated functions in migration files: **74/231** (`V003` + `V004` + `V005`).
+- Full planning classification for **231/231** documented in `docs/proc_migration_status.md`.

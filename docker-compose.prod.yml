@@ -1,0 +1,52 @@
+version: '3.9'
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: dcl
+      POSTGRES_USER: dcl
+      POSTGRES_PASSWORD: dcl
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dcl -d dcl"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  flyway:
+    image: flyway/flyway:10
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command:
+      - -url=jdbc:postgresql://postgres:5432/dcl
+      - -user=dcl
+      - -password=dcl
+      - -locations=filesystem:/flyway/sql
+      - migrate
+    volumes:
+      - ./src/main/resources/db/migration:/flyway/sql:ro
+
+  app:
+    image: eclipse-temurin:17-jre
+    depends_on:
+      postgres:
+        condition: service_healthy
+      flyway:
+        condition: service_completed_successfully
+    working_dir: /app
+    command: ["sh","-c","java -jar /app/app.jar --spring.profiles.active=prod"]
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/dcl
+      SPRING_DATASOURCE_USERNAME: dcl
+      SPRING_DATASOURCE_PASSWORD: dcl
+      APP_ADMIN_USER: admin
+      APP_ADMIN_PASSWORD: change-me
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./build/app.jar:/app/app.jar:ro
+
+volumes:
+  pg_data:
