@@ -3,6 +3,8 @@ package net.sam.dcl.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
@@ -220,4 +222,25 @@ public class CommercialProposalEntity {
 
     @Column(name = "cpr_proposal_declined", nullable = false, length = 1)
     private String proposalDeclined;
+
+    @PrePersist
+    void prePersist() {
+        if (createDate == null) {
+            createDate = LocalDateTime.now();
+        }
+        if (editDate == null) {
+            editDate = createDate;
+        }
+        if (tenderNumberEditable == null) {
+            tenderNumberEditable = "0";
+        }
+        if (proposalDeclined == null) {
+            proposalDeclined = "0";
+        }
+    }
+
+    @PreUpdate
+    void preUpdate() {
+        editDate = LocalDateTime.now();
+    }
 }
