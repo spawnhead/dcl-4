@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Language Screen</title>
+</head>
+<body>
+<h1 th:text="'Screen: ' + ${screen}">Screen</h1>
+<form th:action="@{/language}" th:object="${dto}" method="post">
+    <label>ID <input th:field="*{id}" /></label><br/>
+    <label>Action <input th:field="*{action}" /></label><br/>
+    <label>Payload <textarea th:field="*{payload}"></textarea></label><br/>
+    <button type="submit">Save</button>
+</form>
+<div th:if="${saved}">Saved</div>
+</body>
+</html>
