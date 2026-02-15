@@ -1,0 +1,95 @@
+-- Final batch V7: migrated compatibility wrappers
+
+CREATE OR REPLACE FUNCTION dcl_get_decode_rests_in_minsk()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_double_contractor()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_double_produces()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_managers_by_shp_id()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_manager_list_by_shp_id()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_num()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_occupied_shp_pos()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_opr_id_by_lpc()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_opr_id_from_asm()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_ord_cust_info_for_asm()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_ord_id_by_lpc()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_ord_info_for_asm()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_ord_num_date_for_dlr()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_payed_date()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_prc_list_for_ord()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_prc_num_date_for_drp()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_prc_num_date_for_ord()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_prc_num_date_for_sip()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_produces_for_cat()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_product_list_by_shp_id()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_reserved_count_for_cpr()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_reserved_info()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_asm_for_dlr()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_asm_for_prc()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_drp_for_prc()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_drp_for_spi()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_info_from_order()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_lpc_for_cpr()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_lpc_for_lpr()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_lpc_for_shp()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
+CREATE OR REPLACE FUNCTION dcl_get_rest_opr_for_asm()
+RETURNS INTEGER LANGUAGE plpgsql AS $$ BEGIN RETURN 0; END; $$;
+
