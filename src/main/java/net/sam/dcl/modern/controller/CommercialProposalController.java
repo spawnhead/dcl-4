@@ -36,9 +36,12 @@ public class CommercialProposalController {
 
     @PostMapping
     public String process(@ModelAttribute("dto") CommercialProposalDto dto, Model model) {
-        model.addAttribute("dto", service.process(dto));
+        CommercialProposalDto savedDto = service.process(dto);
+        model.addAttribute("dto", savedDto);
         model.addAttribute("screen", "commercial-proposal");
         model.addAttribute("saved", true);
+        model.addAttribute("generatedId", savedDto.id());
+        model.addAttribute("filterCount", service.filterByProcedure(dto.id()).size());
         return "commercial-proposal";
     }
 }
