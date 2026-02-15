@@ -23,23 +23,23 @@
 
     <repositories>
         <repository>
-            <id>central</id>
-            <url>https://repo1.maven.apache.org/maven2</url>
-        </repository>
-        <repository>
             <id>aliyun</id>
             <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.apache.org/maven2</url>
         </repository>
     </repositories>
 
     <pluginRepositories>
         <pluginRepository>
-            <id>central-plugins</id>
-            <url>https://repo1.maven.apache.org/maven2</url>
-        </pluginRepository>
-        <pluginRepository>
             <id>aliyun-plugins</id>
             <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>central-plugins</id>
+            <url>https://repo1.maven.apache.org/maven2</url>
         </pluginRepository>
     </pluginRepositories>
 
