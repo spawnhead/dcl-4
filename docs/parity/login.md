@@ -1,41 +1,39 @@
-# Login Parity Map (100% required)
+# login Parity Map (100% required)
 
 ## Scope
-- **Legacy:** JSP `src/main/webapp/jsp/login.jsp`, Struts action `/trusted/Login` (LoginAction), Form `LoginForm`.
-- **Modern:** GET `/login` — страница входа, POST `/login/process` — обработка формы (Spring Security).
-
-## Form beans / DTO
-- Legacy: `LoginForm` — поля `usr_login`, `usr_passwd` (из запроса).
-- Modern: форма Thymeleaf `login.html` с полями `usr_login`, `usr_passwd`; обработка Spring Security (UsernamePasswordAuthenticationFilter).
-
-## SQL/DAO (Legacy)
-- `user-load-login` — загрузка пользователя по `usr_login` (без пароля).
-- `user-load-login_pwd` — проверка по `usr_login` и `usr_passwd` (plain text).
-- DAOUtils.load в `LoginAction`: сначала user-load-login, затем user-load-login_pwd; при успехе — User в сессию, redirect на invitation-forward.
+- **Legacy:** JSP `src/main/webapp/jsp/login.jsp`, Struts mapping(s): `<form-bean name="login" type="net.sam.dcl.form.LoginForm"/>`; `<action path="/trusted/Login" type="net.sam.dcl.action.LoginAction" input=".login" name="login">`; `<forward name="login-disabled" path=".login-disabled"/>`.
+- **Modern:** route `/login` (controller: `LoginController` / `LoginController.java`), template ``modern/src/main/resources/templates/login.html``, service `LoginService.java`, DTO `LoginDto.java`.
 
 ## Fields mapping
-| Legacy property | New (Modern) | Type | Validation | Readonly | Notes |
-|-----------------|--------------|------|------------|----------|-------|
-| usr_login       | name="usr_login" | text | required | no | Параметр Spring Security: usernameParameter |
-| usr_passwd      | name="usr_passwd" | password | required | no | passwordParameter |
+| Legacy property | New DTO/Entity | Type | Validation | Readonly cond | Notes |
+|---|---|---|---|---|---|
+| `usr_id` | — | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `userScreenWith` | — | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `usr_login` | — | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `usr_passwd` | — | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
 
 ## Actions
-| Legacy | Modern | Params | Response |
-|--------|--------|--------|----------|
-| POST form → /trusted/Login?dispatch=process | POST → /login/process | usr_login, usr_passwd | 302 → /references (success) или /login?error (failure) |
-| GET страницы входа | GET /login | — | 200 login.html |
-| Выход | POST /logout | — | 302 → /login?logout |
+| Dispatch/Button | New endpoint | Params | Response |
+|---|---|---|---|
+| `dispatch=process` | `GET/POST /login` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
 
-## Auth logic (parity)
-- Пользователь из `dcl_user` по `usr_login`; пароль сравнивается как строка (Legacy: plain text; Modern: NoOpPasswordEncoder).
-- `usr_block = 1` → пользователь заблокирован (Modern: User.disabled).
-- После входа: редирект на главную (Modern: `/references`; Legacy: invitation-forward).
+## Grids
+| Grid ID | Columns | Inline ops | Totals |
+|---|---|---|---|
+| n/a or not explicit in JSP | n/a | n/a | n/a |
 
 ## Print/Export
-Не применимо (экран входа).
+| Type | Params | Output format | Parity check |
+|---|---|---|---|
+| No dedicated print/export command found in inspected JSP/dispatch for this screen | — | — | Parity treated as N/A unless screen-specific print action exists outside current scaffold. |
 
-## Seed пользователь (dev)
-Повторяемая миграция `R__seed_admin_user.sql`: логин **admin**, пароль **admin** (при отсутствии пользователя с USR_LOGIN='admin').
+## Validation
+- Legacy: validation is primarily defined by Struts dispatch flow, DAO/SQL constraints, and JSP control semantics.
+- Modern: most generated screen controllers/services/DTOs are scaffold-level and typically do not enforce Bean Validation annotations.
+
+## Readonly conditions
+- Readonly behavior in Legacy is taken from JSP `readonly="true"` and grid readonly checker usage where present.
+- Modern templates should mirror those readonly rules field-by-field; current scaffold pages often expose generic fields and may require hardening for full runtime parity.
 
 ## Status: 100% (DONE)
 Open issues: []

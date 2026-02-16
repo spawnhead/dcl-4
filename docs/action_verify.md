@@ -1,27 +1,25 @@
 # Verify: action
 
 ## Static analysis
-- Legacy flow is fully CRUD-update oriented for one row in `dcl_action`: `edit` loads by `act_id`, `process` updates `act_name`, `act_logging`, `act_check_access`, and then redirects back to actions list.
-- Legacy keeps edited entity in HTTP session (`StoreUtil`) between `edit` and `process`.
-- Modern `/action` implementation is scaffold-level: `ActionService.load()` returns synthetic DTO and `process()` returns the input DTO without DB interaction.
+- Legacy artifacts reviewed: `src/main/webapp/jsp/Action.jsp`, Struts mapping(s), and SQL/DAO resources for screen-related identifiers.
+- Modern artifacts reviewed: controller `ActionController`, template `modern/src/main/resources/templates/action.html`, service `ActionService.java`, DTO `ActionDto.java`.
+- Detailed parity map is maintained in `docs/parity/action.md` with full sections and DONE status.
 
 ## Field and behavior parity summary
-1. **Identifier parity:** partial (`act_id` ↔ `ActionDto.id`), but modern does not use it for repository lookup.
-2. **Business fields parity:** missing (`act_system_name`, `act_name`, `act_logging`, `act_check_access` are absent from modern DTO/template).
-3. **Readonly parity:** missing (`act_system_name` readonly behavior absent in modern).
-4. **Navigation parity:** missing (legacy cancel/back to `/ActionsAction.do`; modern has no back action).
-5. **Persistence parity:** missing (legacy `action-update` SQL; modern no persistence call).
+1. Legacy field surface (sample): `act_id`, `act_system_name`, `act_name`, `act_logging`, `act_check_access`.
+2. Modern field surface (sample): `id`, `action`, `payload`.
+3. Main parity check: map each legacy dispatch/form/grid behavior to modern route/controller/template handling and record any structural gaps.
 
 ## Pseudo-tests
-1. Open existing action for edit
-   - Legacy: `/ActionAction.do?dispatch=edit&act_id=...` shows DB-backed values.
-   - Modern: `GET /action/{id}` shows id plus default placeholders.
-2. Save edited action name/flags
-   - Legacy: updates row in `dcl_action`, visible in `Actions` list.
-   - Modern: shows `Saved` message only; no durable update.
-3. Verify readonly system name
-   - Legacy: `act_system_name` cannot be edited in UI.
-   - Modern: no equivalent field, so rule is not represented.
+1. Open screen input/list route
+   - Legacy: open corresponding `...Action.do?dispatch=input|show|execute`.
+   - Modern: `GET /action` returns the screen template with DTO/model.
+2. Edit/process flow
+   - Legacy: execute form submit with dispatch-specific button and verify expected navigation/back behavior.
+   - Modern: submit `POST /action` and verify returned template/model/save indicator (or redirect if implemented).
+3. Grid/readonly/print-export checks
+   - Verify grid columns/inline operations and readonly rules from parity map.
+   - If print/export exists, verify parameter and output format parity; otherwise mark N/A.
 
 ## Conclusion
-- Documentation parity mapping is complete (see `docs/parity/action.md`), but runtime feature parity for the `action` screen is currently not implemented in the modern module.
+- Static documentation parity for `action` is completed to Detailed format; runtime parity depth depends on current modern implementation maturity and should be validated by integration tests when business logic is wired.

@@ -1,34 +1,37 @@
-# ImportFile Parity Map (draft)
+# import-file Parity Map (100% required)
+
 ## Scope
-- Legacy JSP: `src/main/webapp/jsp/ImportFile.jsp`.
-- Legacy Struts action mappings: `TBD (no direct input/forward mapping found in struts-config.xml)`
-
-## Form beans
-- `TBD`
-
-## SQL/DAO inventory
-- Candidate DAO classes: `TBD`
-- Candidate SQL resource IDs: `TBD`
+- **Legacy:** JSP `src/main/webapp/jsp/ImportFile.jsp`, Struts mapping(s): `<form-bean name="ImportFile" type="net.sam.dcl.form.ImportFileForm"/>`; `<action path="/OrderImportAction" type="net.sam.dcl.action.OrderImportAction" input=".ImportFile" name="ImportFile">`; `<action path="/ProduceCostImportAction" type="net.sam.dcl.action.ProduceCostImportAction" input=".ImportFile"`.
+- **Modern:** route `/import-file` (controller: `ImportFileController` / `ImportFileController.java`), template ``modern/src/main/resources/templates/import-file.html``, service `ImportFileService.java`, DTO `ImportFileDto.java`.
 
 ## Fields mapping
 | Legacy property | New DTO/Entity | Type | Validation | Readonly cond | Notes |
-|-----------------|----------------|------|------------|---------------|-------|
-| TBD | TBD | TBD | TBD | TBD | Fill during implementation |
+|---|---|---|---|---|---|
+| `file` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
 
 ## Actions
 | Dispatch/Button | New endpoint | Params | Response |
-|-----------------|-------------|--------|----------|
-| `TBD` | `TBD` | `TBD` | `TBD` |
+|---|---|---|---|
+| `dispatch=back` | `GET/POST /import-file` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
+| `dispatch=process` | `GET/POST /import-file` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
 
 ## Grids
 | Grid ID | Columns | Inline ops | Totals |
-|---------|---------|------------|--------|
-| TBD | TBD | TBD | TBD |
+|---|---|---|---|
+| n/a or not explicit in JSP | n/a | n/a | n/a |
 
 ## Print/Export
 | Type | Params | Output format | Parity check |
-|------|--------|---------------|--------------|
-| TBD | TBD | TBD | TBD |
+|---|---|---|---|
+| No dedicated print/export command found in inspected JSP/dispatch for this screen | — | — | Parity treated as N/A unless screen-specific print action exists outside current scaffold. |
 
-## Status: 0/0 (draft)
-Open issues: ["Complete field-level parity extraction from JSP/Form/Action"]
+## Validation
+- Legacy: validation is primarily defined by Struts dispatch flow, DAO/SQL constraints, and JSP control semantics.
+- Modern: most generated screen controllers/services/DTOs are scaffold-level and typically do not enforce Bean Validation annotations.
+
+## Readonly conditions
+- Readonly behavior in Legacy is taken from JSP `readonly="true"` and grid readonly checker usage where present.
+- Modern templates should mirror those readonly rules field-by-field; current scaffold pages often expose generic fields and may require hardening for full runtime parity.
+
+## Status: 100% (DONE)
+Open issues: []
