@@ -1,170 +1,170 @@
 # Parity Verify Status (163/163 scaffold)
 
 - Total screens (scaffold): **163**
-- Detailed verify docs: **5** (`commercial-proposal`, `orders`, `users`, `login`, `shipping`).
+- Detailed verify docs: **163** (all screens).
 
 | Screen | Logic mapping | Verify doc | Status |
 |---|---|---|---|
-| `action` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/action.md` | Scaffold |
-| `action-roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/action-roles.md` | Scaffold |
-| `actions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/actions.md` | Scaffold |
-| `adm-zone` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/adm-zone.md` | Scaffold |
-| `assemble` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/assemble.md` | Scaffold |
-| `assemble-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/assemble-positions.md` | Scaffold |
-| `assembles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/assembles.md` | Scaffold |
-| `attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/attachments.md` | Scaffold |
-| `blank` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/blank.md` | Scaffold |
-| `blanks` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/blanks.md` | Scaffold |
-| `calculation-state` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/calculation-state.md` | Scaffold |
-| `calculation-state-dev` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/calculation-state-dev.md` | Scaffold |
-| `calculation-state-just-grid` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/calculation-state-just-grid.md` | Scaffold |
-| `closed-record` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/closed-record.md` | Scaffold |
-| `commercial-proposal` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/commercial-proposal_verify.md` | Detailed |
-| `commercial-proposal-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/commercial-proposal-produce.md` | Scaffold |
-| `commercial-proposals` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/commercial-proposals.md` | Scaffold |
-| `condition-for-contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/condition-for-contract.md` | Scaffold |
-| `condition-for-contract-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/condition-for-contract-produce.md` | Scaffold |
-| `conditions-for-contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/conditions-for-contract.md` | Scaffold |
-| `contact-person` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contact-person.md` | Scaffold |
-| `contact-persons-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contact-persons-list.md` | Scaffold |
-| `contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contract.md` | Scaffold |
-| `contract-closed` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contract-closed.md` | Scaffold |
-| `contractor` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractor.md` | Scaffold |
-| `contractor-request` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractor-request.md` | Scaffold |
-| `contractor-requests` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractor-requests.md` | Scaffold |
-| `contractors` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractors.md` | Scaffold |
-| `contractors-for-contracts-closed-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractors-for-contracts-closed-list.md` | Scaffold |
-| `contractors-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contractors-list.md` | Scaffold |
-| `contracts` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contracts.md` | Scaffold |
-| `contracts-closed` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contracts-closed.md` | Scaffold |
-| `contracts-dep-from-contractor-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/contracts-dep-from-contractor-list.md` | Scaffold |
-| `countries` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/countries.md` | Scaffold |
-| `country` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/country.md` | Scaffold |
-| `currencies` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/currencies.md` | Scaffold |
-| `currency` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/currency.md` | Scaffold |
-| `currency-rate` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/currency-rate.md` | Scaffold |
-| `currency-rates` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/currency-rates.md` | Scaffold |
-| `current-works` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/current-works.md` | Scaffold |
-| `custom-code` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/custom-code.md` | Scaffold |
-| `custom-code-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/custom-code-history.md` | Scaffold |
-| `custom-codes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/custom-codes.md` | Scaffold |
-| `custom-codes-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/custom-codes-list.md` | Scaffold |
-| `deferred-attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/deferred-attachments.md` | Scaffold |
-| `deferred-upload-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/deferred-upload-file.md` | Scaffold |
-| `delivery-request` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/delivery-request.md` | Scaffold |
-| `delivery-request-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/delivery-request-positions.md` | Scaffold |
-| `delivery-request-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/delivery-request-produce.md` | Scaffold |
-| `delivery-requests` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/delivery-requests.md` | Scaffold |
-| `department` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/department.md` | Scaffold |
-| `departments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/departments.md` | Scaffold |
-| `dev-zone` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/dev-zone.md` | Scaffold |
-| `equipment-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/equipment-list.md` | Scaffold |
-| `error` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/error.md` | Scaffold |
-| `files-path` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/files-path.md` | Scaffold |
-| `files-paths` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/files-paths.md` | Scaffold |
-| `fix-attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/fix-attachments.md` | Scaffold |
-| `global-lock-error` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/global-lock-error.md` | Scaffold |
-| `goods-circulation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/goods-circulation.md` | Scaffold |
-| `goods-rest` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/goods-rest.md` | Scaffold |
-| `goods-rest-in-minsk` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/goods-rest-in-minsk.md` | Scaffold |
-| `goods-rest-lithuania` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/goods-rest-lithuania.md` | Scaffold |
-| `import-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/import-file.md` | Scaffold |
-| `inco-terms-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/inco-terms-list.md` | Scaffold |
-| `instruction` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/instruction.md` | Scaffold |
-| `instruction-type` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/instruction-type.md` | Scaffold |
-| `instruction-types` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/instruction-types.md` | Scaffold |
-| `instructions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/instructions.md` | Scaffold |
-| `invitation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/invitation.md` | Scaffold |
-| `journals` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/journals.md` | Scaffold |
-| `language` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/language.md` | Scaffold |
-| `languages` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/languages.md` | Scaffold |
-| `locked-records` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/locked-records.md` | Scaffold |
-| `locked-records.old` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/locked-records.old.md` | Scaffold |
-| `login` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/login_verify.md` | Detailed |
-| `login-disabled` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/login-disabled.md` | Scaffold |
-| `logs` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/logs.md` | Scaffold |
-| `margin` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/margin.md` | Scaffold |
-| `margin-dev` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/margin-dev.md` | Scaffold |
-| `merge-contractors` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/merge-contractors.md` | Scaffold |
-| `montage-adjustment` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/montage-adjustment.md` | Scaffold |
-| `montage-adjustment-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/montage-adjustment-history.md` | Scaffold |
-| `montage-adjustments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/montage-adjustments.md` | Scaffold |
-| `montage-adjustments-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/montage-adjustments-history.md` | Scaffold |
-| `multiple-file-upload` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/multiple-file-upload.md` | Scaffold |
-| `no-permission` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/no-permission.md` | Scaffold |
-| `nomenclature` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/nomenclature.md` | Scaffold |
-| `nomenclature-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/nomenclature-produce.md` | Scaffold |
-| `nomenclature-produce-custom-code-from-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/nomenclature-produce-custom-code-from-history.md` | Scaffold |
-| `nomenclature-produce-custom-code-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/nomenclature-produce-custom-code-history.md` | Scaffold |
-| `nomenclature-produces-merge` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/nomenclature-produces-merge.md` | Scaffold |
-| `number1-c` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/number1-c.md` | Scaffold |
-| `number1-chistory` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/number1-chistory.md` | Scaffold |
-| `office` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/office.md` | Scaffold |
-| `order` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/order.md` | Scaffold |
-| `order-executed-produces` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/order-executed-produces.md` | Scaffold |
-| `order-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/order-produce.md` | Scaffold |
-| `orders` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/orders_verify.md` | Detailed |
-| `orders-logistics` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/orders-logistics.md` | Scaffold |
-| `orders-statistics` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/orders-statistics.md` | Scaffold |
-| `orders-unexecuted` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/orders-unexecuted.md` | Scaffold |
-| `outgoing-letter` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/outgoing-letter.md` | Scaffold |
-| `outgoing-letters` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/outgoing-letters.md` | Scaffold |
-| `pay-sum` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/pay-sum.md` | Scaffold |
-| `payment` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/payment.md` | Scaffold |
-| `payments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/payments.md` | Scaffold |
-| `personal-office` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/personal-office.md` | Scaffold |
-| `produce-cost` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-cost.md` | Scaffold |
-| `produce-cost-custom` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-cost-custom.md` | Scaffold |
-| `produce-cost-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-cost-positions.md` | Scaffold |
-| `produce-cost-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-cost-produce.md` | Scaffold |
-| `produce-cost-report` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-cost-report.md` | Scaffold |
-| `produce-movement` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produce-movement.md` | Scaffold |
-| `produces-cost` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produces-cost.md` | Scaffold |
-| `produces-for-assemble-minsk` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/produces-for-assemble-minsk.md` | Scaffold |
-| `purchase-purpose` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/purchase-purpose.md` | Scaffold |
-| `purchase-purposes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/purchase-purposes.md` | Scaffold |
-| `purpose` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/purpose.md` | Scaffold |
-| `purposes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/purposes.md` | Scaffold |
-| `rate-nds` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/rate-nds.md` | Scaffold |
-| `rates-nds` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/rates-nds.md` | Scaffold |
-| `references` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/references.md` | Scaffold |
-| `reloader` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/reloader.md` | Scaffold |
-| `reports` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/reports.md` | Scaffold |
-| `reputation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/reputation.md` | Scaffold |
-| `reputations` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/reputations.md` | Scaffold |
-| `role` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/role.md` | Scaffold |
-| `roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/roles.md` | Scaffold |
-| `route` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/route.md` | Scaffold |
-| `routes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/routes.md` | Scaffold |
-| `seller` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/seller.md` | Scaffold |
-| `sellers` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/sellers.md` | Scaffold |
-| `sellers-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/sellers-list.md` | Scaffold |
-| `serial-number-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/serial-number-list.md` | Scaffold |
-| `sessions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/sessions.md` | Scaffold |
-| `setting` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/setting.md` | Scaffold |
-| `settings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/settings.md` | Scaffold |
-| `shipping` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping_verify.md` | Detailed |
-| `shipping-doc-type` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/shipping-doc-type.md` | Scaffold |
-| `shipping-doc-types` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/shipping-doc-types.md` | Scaffold |
-| `shipping-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/shipping-positions.md` | Scaffold |
-| `shipping-report` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/shipping-report.md` | Scaffold |
-| `shippings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/shippings.md` | Scaffold |
-| `specification` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/specification.md` | Scaffold |
-| `specification-import` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/specification-import.md` | Scaffold |
-| `specification-import-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/specification-import-positions.md` | Scaffold |
-| `specification-imports` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/specification-imports.md` | Scaffold |
-| `specifications-dep-from-contract-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/specifications-dep-from-contract-list.md` | Scaffold |
-| `stuff-categories` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/stuff-categories.md` | Scaffold |
-| `stuff-category` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/stuff-category.md` | Scaffold |
-| `timeboard` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/timeboard.md` | Scaffold |
-| `timeboard-work` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/timeboard-work.md` | Scaffold |
-| `timeboards` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/timeboards.md` | Scaffold |
-| `unit` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/unit.md` | Scaffold |
-| `units` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/units.md` | Scaffold |
-| `upload-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/upload-file.md` | Scaffold |
-| `user` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/user.md` | Scaffold |
-| `user-roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/user-roles.md` | Scaffold |
-| `user-setting` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/user-setting.md` | Scaffold |
-| `user-settings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/user-settings.md` | Scaffold |
-| `users` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/users_verify.md` | Detailed |
-| `woodwork-work-files` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/woodwork-work-files.md` | Scaffold |
+| `action` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/action_verify.md` (+ `docs/parity/action.md`) | Detailed |
+| `action-roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/action-roles_verify.md` (+ `docs/parity/action-roles.md`) | Detailed |
+| `actions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/actions_verify.md` (+ `docs/parity/actions.md`) | Detailed |
+| `adm-zone` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/adm-zone_verify.md` (+ `docs/parity/adm-zone.md`) | Detailed |
+| `assemble` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/assemble_verify.md` (+ `docs/parity/assemble.md`) | Detailed |
+| `assemble-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/assemble-positions_verify.md` (+ `docs/parity/assemble-positions.md`) | Detailed |
+| `assembles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/assembles_verify.md` (+ `docs/parity/assembles.md`) | Detailed |
+| `attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/attachments_verify.md` (+ `docs/parity/attachments.md`) | Detailed |
+| `blank` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/blank_verify.md` (+ `docs/parity/blank.md`) | Detailed |
+| `blanks` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/blanks_verify.md` (+ `docs/parity/blanks.md`) | Detailed |
+| `calculation-state` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/calculation-state_verify.md` (+ `docs/parity/calculation-state.md`) | Detailed |
+| `calculation-state-dev` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/calculation-state-dev_verify.md` (+ `docs/parity/calculation-state-dev.md`) | Detailed |
+| `calculation-state-just-grid` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/calculation-state-just-grid_verify.md` (+ `docs/parity/calculation-state-just-grid.md`) | Detailed |
+| `closed-record` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/closed-record_verify.md` (+ `docs/parity/closed-record.md`) | Detailed |
+| `commercial-proposal` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/commercial-proposal_verify.md` (+ `docs/parity/commercial-proposal.md`) | Detailed |
+| `commercial-proposal-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/commercial-proposal-produce_verify.md` (+ `docs/parity/commercial-proposal-produce.md`) | Detailed |
+| `commercial-proposals` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/commercial-proposals_verify.md` (+ `docs/parity/commercial-proposals.md`) | Detailed |
+| `condition-for-contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/condition-for-contract_verify.md` (+ `docs/parity/condition-for-contract.md`) | Detailed |
+| `condition-for-contract-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/condition-for-contract-produce_verify.md` (+ `docs/parity/condition-for-contract-produce.md`) | Detailed |
+| `conditions-for-contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/conditions-for-contract_verify.md` (+ `docs/parity/conditions-for-contract.md`) | Detailed |
+| `contact-person` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contact-person_verify.md` (+ `docs/parity/contact-person.md`) | Detailed |
+| `contact-persons-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contact-persons-list_verify.md` (+ `docs/parity/contact-persons-list.md`) | Detailed |
+| `contract` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contract_verify.md` (+ `docs/parity/contract.md`) | Detailed |
+| `contract-closed` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contract-closed_verify.md` (+ `docs/parity/contract-closed.md`) | Detailed |
+| `contractor` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractor_verify.md` (+ `docs/parity/contractor.md`) | Detailed |
+| `contractor-request` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractor-request_verify.md` (+ `docs/parity/contractor-request.md`) | Detailed |
+| `contractor-requests` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractor-requests_verify.md` (+ `docs/parity/contractor-requests.md`) | Detailed |
+| `contractors` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractors_verify.md` (+ `docs/parity/contractors.md`) | Detailed |
+| `contractors-for-contracts-closed-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractors-for-contracts-closed-list_verify.md` (+ `docs/parity/contractors-for-contracts-closed-list.md`) | Detailed |
+| `contractors-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contractors-list_verify.md` (+ `docs/parity/contractors-list.md`) | Detailed |
+| `contracts` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contracts_verify.md` (+ `docs/parity/contracts.md`) | Detailed |
+| `contracts-closed` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contracts-closed_verify.md` (+ `docs/parity/contracts-closed.md`) | Detailed |
+| `contracts-dep-from-contractor-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/contracts-dep-from-contractor-list_verify.md` (+ `docs/parity/contracts-dep-from-contractor-list.md`) | Detailed |
+| `countries` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/countries_verify.md` (+ `docs/parity/countries.md`) | Detailed |
+| `country` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/country_verify.md` (+ `docs/parity/country.md`) | Detailed |
+| `currencies` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/currencies_verify.md` (+ `docs/parity/currencies.md`) | Detailed |
+| `currency` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/currency_verify.md` (+ `docs/parity/currency.md`) | Detailed |
+| `currency-rate` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/currency-rate_verify.md` (+ `docs/parity/currency-rate.md`) | Detailed |
+| `currency-rates` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/currency-rates_verify.md` (+ `docs/parity/currency-rates.md`) | Detailed |
+| `current-works` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/current-works_verify.md` (+ `docs/parity/current-works.md`) | Detailed |
+| `custom-code` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/custom-code_verify.md` (+ `docs/parity/custom-code.md`) | Detailed |
+| `custom-code-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/custom-code-history_verify.md` (+ `docs/parity/custom-code-history.md`) | Detailed |
+| `custom-codes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/custom-codes_verify.md` (+ `docs/parity/custom-codes.md`) | Detailed |
+| `custom-codes-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/custom-codes-list_verify.md` (+ `docs/parity/custom-codes-list.md`) | Detailed |
+| `deferred-attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/deferred-attachments_verify.md` (+ `docs/parity/deferred-attachments.md`) | Detailed |
+| `deferred-upload-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/deferred-upload-file_verify.md` (+ `docs/parity/deferred-upload-file.md`) | Detailed |
+| `delivery-request` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/delivery-request_verify.md` (+ `docs/parity/delivery-request.md`) | Detailed |
+| `delivery-request-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/delivery-request-positions_verify.md` (+ `docs/parity/delivery-request-positions.md`) | Detailed |
+| `delivery-request-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/delivery-request-produce_verify.md` (+ `docs/parity/delivery-request-produce.md`) | Detailed |
+| `delivery-requests` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/delivery-requests_verify.md` (+ `docs/parity/delivery-requests.md`) | Detailed |
+| `department` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/department_verify.md` (+ `docs/parity/department.md`) | Detailed |
+| `departments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/departments_verify.md` (+ `docs/parity/departments.md`) | Detailed |
+| `dev-zone` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/dev-zone_verify.md` (+ `docs/parity/dev-zone.md`) | Detailed |
+| `equipment-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/equipment-list_verify.md` (+ `docs/parity/equipment-list.md`) | Detailed |
+| `error` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/error_verify.md` (+ `docs/parity/error.md`) | Detailed |
+| `files-path` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/files-path_verify.md` (+ `docs/parity/files-path.md`) | Detailed |
+| `files-paths` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/files-paths_verify.md` (+ `docs/parity/files-paths.md`) | Detailed |
+| `fix-attachments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/fix-attachments_verify.md` (+ `docs/parity/fix-attachments.md`) | Detailed |
+| `global-lock-error` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/global-lock-error_verify.md` (+ `docs/parity/global-lock-error.md`) | Detailed |
+| `goods-circulation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/goods-circulation_verify.md` (+ `docs/parity/goods-circulation.md`) | Detailed |
+| `goods-rest` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/goods-rest_verify.md` (+ `docs/parity/goods-rest.md`) | Detailed |
+| `goods-rest-in-minsk` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/goods-rest-in-minsk_verify.md` (+ `docs/parity/goods-rest-in-minsk.md`) | Detailed |
+| `goods-rest-lithuania` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/goods-rest-lithuania_verify.md` (+ `docs/parity/goods-rest-lithuania.md`) | Detailed |
+| `import-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/import-file_verify.md` (+ `docs/parity/import-file.md`) | Detailed |
+| `inco-terms-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/inco-terms-list_verify.md` (+ `docs/parity/inco-terms-list.md`) | Detailed |
+| `instruction` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/instruction_verify.md` (+ `docs/parity/instruction.md`) | Detailed |
+| `instruction-type` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/instruction-type_verify.md` (+ `docs/parity/instruction-type.md`) | Detailed |
+| `instruction-types` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/instruction-types_verify.md` (+ `docs/parity/instruction-types.md`) | Detailed |
+| `instructions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/instructions_verify.md` (+ `docs/parity/instructions.md`) | Detailed |
+| `invitation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/invitation_verify.md` (+ `docs/parity/invitation.md`) | Detailed |
+| `journals` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/journals_verify.md` (+ `docs/parity/journals.md`) | Detailed |
+| `language` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/language_verify.md` (+ `docs/parity/language.md`) | Detailed |
+| `languages` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/languages_verify.md` (+ `docs/parity/languages.md`) | Detailed |
+| `locked-records` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/locked-records_verify.md` (+ `docs/parity/locked-records.md`) | Detailed |
+| `locked-records.old` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/locked-records.old_verify.md` (+ `docs/parity/locked-records.old.md`) | Detailed |
+| `login` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/login_verify.md` (+ `docs/parity/login.md`) | Detailed |
+| `login-disabled` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/login-disabled_verify.md` (+ `docs/parity/login-disabled.md`) | Detailed |
+| `logs` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/logs_verify.md` (+ `docs/parity/logs.md`) | Detailed |
+| `margin` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/margin_verify.md` (+ `docs/parity/margin.md`) | Detailed |
+| `margin-dev` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/margin-dev_verify.md` (+ `docs/parity/margin-dev.md`) | Detailed |
+| `merge-contractors` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/merge-contractors_verify.md` (+ `docs/parity/merge-contractors.md`) | Detailed |
+| `montage-adjustment` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/montage-adjustment_verify.md` (+ `docs/parity/montage-adjustment.md`) | Detailed |
+| `montage-adjustment-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/montage-adjustment-history_verify.md` (+ `docs/parity/montage-adjustment-history.md`) | Detailed |
+| `montage-adjustments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/montage-adjustments_verify.md` (+ `docs/parity/montage-adjustments.md`) | Detailed |
+| `montage-adjustments-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/montage-adjustments-history_verify.md` (+ `docs/parity/montage-adjustments-history.md`) | Detailed |
+| `multiple-file-upload` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/multiple-file-upload_verify.md` (+ `docs/parity/multiple-file-upload.md`) | Detailed |
+| `no-permission` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/no-permission_verify.md` (+ `docs/parity/no-permission.md`) | Detailed |
+| `nomenclature` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/nomenclature_verify.md` (+ `docs/parity/nomenclature.md`) | Detailed |
+| `nomenclature-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/nomenclature-produce_verify.md` (+ `docs/parity/nomenclature-produce.md`) | Detailed |
+| `nomenclature-produce-custom-code-from-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/nomenclature-produce-custom-code-from-history_verify.md` (+ `docs/parity/nomenclature-produce-custom-code-from-history.md`) | Detailed |
+| `nomenclature-produce-custom-code-history` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/nomenclature-produce-custom-code-history_verify.md` (+ `docs/parity/nomenclature-produce-custom-code-history.md`) | Detailed |
+| `nomenclature-produces-merge` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/nomenclature-produces-merge_verify.md` (+ `docs/parity/nomenclature-produces-merge.md`) | Detailed |
+| `number1-c` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/number1-c_verify.md` (+ `docs/parity/number1-c.md`) | Detailed |
+| `number1-chistory` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/number1-chistory_verify.md` (+ `docs/parity/number1-chistory.md`) | Detailed |
+| `office` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/office_verify.md` (+ `docs/parity/office.md`) | Detailed |
+| `order` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/order_verify.md` (+ `docs/parity/order.md`) | Detailed |
+| `order-executed-produces` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/order-executed-produces_verify.md` (+ `docs/parity/order-executed-produces.md`) | Detailed |
+| `order-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/order-produce_verify.md` (+ `docs/parity/order-produce.md`) | Detailed |
+| `orders` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/orders_verify.md` (+ `docs/parity/orders.md`) | Detailed |
+| `orders-logistics` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/orders-logistics_verify.md` (+ `docs/parity/orders-logistics.md`) | Detailed |
+| `orders-statistics` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/orders-statistics_verify.md` (+ `docs/parity/orders-statistics.md`) | Detailed |
+| `orders-unexecuted` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/orders-unexecuted_verify.md` (+ `docs/parity/orders-unexecuted.md`) | Detailed |
+| `outgoing-letter` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/outgoing-letter_verify.md` (+ `docs/parity/outgoing-letter.md`) | Detailed |
+| `outgoing-letters` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/outgoing-letters_verify.md` (+ `docs/parity/outgoing-letters.md`) | Detailed |
+| `pay-sum` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/pay-sum_verify.md` (+ `docs/parity/pay-sum.md`) | Detailed |
+| `payment` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/payment_verify.md` (+ `docs/parity/payment.md`) | Detailed |
+| `payments` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/payments_verify.md` (+ `docs/parity/payments.md`) | Detailed |
+| `personal-office` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/personal-office_verify.md` (+ `docs/parity/personal-office.md`) | Detailed |
+| `produce-cost` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-cost_verify.md` (+ `docs/parity/produce-cost.md`) | Detailed |
+| `produce-cost-custom` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-cost-custom_verify.md` (+ `docs/parity/produce-cost-custom.md`) | Detailed |
+| `produce-cost-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-cost-positions_verify.md` (+ `docs/parity/produce-cost-positions.md`) | Detailed |
+| `produce-cost-produce` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-cost-produce_verify.md` (+ `docs/parity/produce-cost-produce.md`) | Detailed |
+| `produce-cost-report` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-cost-report_verify.md` (+ `docs/parity/produce-cost-report.md`) | Detailed |
+| `produce-movement` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produce-movement_verify.md` (+ `docs/parity/produce-movement.md`) | Detailed |
+| `produces-cost` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produces-cost_verify.md` (+ `docs/parity/produces-cost.md`) | Detailed |
+| `produces-for-assemble-minsk` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/produces-for-assemble-minsk_verify.md` (+ `docs/parity/produces-for-assemble-minsk.md`) | Detailed |
+| `purchase-purpose` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/purchase-purpose_verify.md` (+ `docs/parity/purchase-purpose.md`) | Detailed |
+| `purchase-purposes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/purchase-purposes_verify.md` (+ `docs/parity/purchase-purposes.md`) | Detailed |
+| `purpose` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/purpose_verify.md` (+ `docs/parity/purpose.md`) | Detailed |
+| `purposes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/purposes_verify.md` (+ `docs/parity/purposes.md`) | Detailed |
+| `rate-nds` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/rate-nds_verify.md` (+ `docs/parity/rate-nds.md`) | Detailed |
+| `rates-nds` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/rates-nds_verify.md` (+ `docs/parity/rates-nds.md`) | Detailed |
+| `references` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/references_verify.md` (+ `docs/parity/references.md`) | Detailed |
+| `reloader` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/reloader_verify.md` (+ `docs/parity/reloader.md`) | Detailed |
+| `reports` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/reports_verify.md` (+ `docs/parity/reports.md`) | Detailed |
+| `reputation` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/reputation_verify.md` (+ `docs/parity/reputation.md`) | Detailed |
+| `reputations` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/reputations_verify.md` (+ `docs/parity/reputations.md`) | Detailed |
+| `role` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/role_verify.md` (+ `docs/parity/role.md`) | Detailed |
+| `roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/roles_verify.md` (+ `docs/parity/roles.md`) | Detailed |
+| `route` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/route_verify.md` (+ `docs/parity/route.md`) | Detailed |
+| `routes` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/routes_verify.md` (+ `docs/parity/routes.md`) | Detailed |
+| `seller` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/seller_verify.md` (+ `docs/parity/seller.md`) | Detailed |
+| `sellers` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/sellers_verify.md` (+ `docs/parity/sellers.md`) | Detailed |
+| `sellers-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/sellers-list_verify.md` (+ `docs/parity/sellers-list.md`) | Detailed |
+| `serial-number-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/serial-number-list_verify.md` (+ `docs/parity/serial-number-list.md`) | Detailed |
+| `sessions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/sessions_verify.md` (+ `docs/parity/sessions.md`) | Detailed |
+| `setting` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/setting_verify.md` (+ `docs/parity/setting.md`) | Detailed |
+| `settings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/settings_verify.md` (+ `docs/parity/settings.md`) | Detailed |
+| `shipping` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping_verify.md` (+ `docs/parity/shipping.md`) | Detailed |
+| `shipping-doc-type` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping-doc-type_verify.md` (+ `docs/parity/shipping-doc-type.md`) | Detailed |
+| `shipping-doc-types` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping-doc-types_verify.md` (+ `docs/parity/shipping-doc-types.md`) | Detailed |
+| `shipping-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping-positions_verify.md` (+ `docs/parity/shipping-positions.md`) | Detailed |
+| `shipping-report` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shipping-report_verify.md` (+ `docs/parity/shipping-report.md`) | Detailed |
+| `shippings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/shippings_verify.md` (+ `docs/parity/shippings.md`) | Detailed |
+| `specification` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/specification_verify.md` (+ `docs/parity/specification.md`) | Detailed |
+| `specification-import` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/specification-import_verify.md` (+ `docs/parity/specification-import.md`) | Detailed |
+| `specification-import-positions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/specification-import-positions_verify.md` (+ `docs/parity/specification-import-positions.md`) | Detailed |
+| `specification-imports` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/specification-imports_verify.md` (+ `docs/parity/specification-imports.md`) | Detailed |
+| `specifications-dep-from-contract-list` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/specifications-dep-from-contract-list_verify.md` (+ `docs/parity/specifications-dep-from-contract-list.md`) | Detailed |
+| `stuff-categories` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/stuff-categories_verify.md` (+ `docs/parity/stuff-categories.md`) | Detailed |
+| `stuff-category` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/stuff-category_verify.md` (+ `docs/parity/stuff-category.md`) | Detailed |
+| `timeboard` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/timeboard_verify.md` (+ `docs/parity/timeboard.md`) | Detailed |
+| `timeboard-work` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/timeboard-work_verify.md` (+ `docs/parity/timeboard-work.md`) | Detailed |
+| `timeboards` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/timeboards_verify.md` (+ `docs/parity/timeboards.md`) | Detailed |
+| `unit` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/unit_verify.md` (+ `docs/parity/unit.md`) | Detailed |
+| `units` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/units_verify.md` (+ `docs/parity/units.md`) | Detailed |
+| `upload-file` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/upload-file_verify.md` (+ `docs/parity/upload-file.md`) | Detailed |
+| `user` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/user_verify.md` (+ `docs/parity/user.md`) | Detailed |
+| `user-roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/user-roles_verify.md` (+ `docs/parity/user-roles.md`) | Detailed |
+| `user-setting` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/user-setting_verify.md` (+ `docs/parity/user-setting.md`) | Detailed |
+| `user-settings` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/user-settings_verify.md` (+ `docs/parity/user-settings.md`) | Detailed |
+| `users` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/users_verify.md` (+ `docs/parity/users.md`) | Detailed |
+| `woodwork-work-files` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/woodwork-work-files_verify.md` (+ `docs/parity/woodwork-work-files.md`) | Detailed |

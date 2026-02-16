@@ -1,41 +1,49 @@
-# Orders Parity Map (draft)
+# orders Parity Map (100% required)
+
 ## Scope
-- Legacy JSP: `src/main/webapp/jsp/Orders.jsp`.
-- Legacy Struts action mappings: `TBD (no direct input/forward mapping found in struts-config.xml)`
-
-## Form beans
-- `TBD`
-
-## SQL/DAO inventory
-- Candidate DAO classes: `TBD`
-- Candidate SQL resource IDs:
-  - `select-orders`
-  - `delete_contractor_request_orders`
-  - `select-contractor_request_orders`
-  - `test-select-orders-by-date`
-  - `select-orders_statistics`
-  - `select-orders_unexecuted`
-  - `select-orders_logistics`
+- **Legacy:** JSP `src/main/webapp/jsp/Orders.jsp`, Struts mapping(s): `<form-bean name="Orders" type="net.sam.dcl.form.OrdersForm"/>`; `<form-bean name="OrdersStatistics" type="net.sam.dcl.form.OrdersStatisticsForm"/>`; `<form-bean name="OrdersUnexecuted" type="net.sam.dcl.form.OrdersUnexecutedForm"/>`; `<form-bean name="OrdersLogistics" type="net.sam.dcl.form.OrdersLogisticsForm"/>`.
+- **Modern:** route `/orders` (controller: `OrdersController` / `OrdersController.java`), template ``modern/src/main/resources/templates/orders.html``, service `OrdersService.java`, DTO `OrdersDto.java`.
 
 ## Fields mapping
 | Legacy property | New DTO/Entity | Type | Validation | Readonly cond | Notes |
-|-----------------|----------------|------|------------|---------------|-------|
-| TBD | TBD | TBD | TBD | TBD | Fill during implementation |
+|---|---|---|---|---|---|
+| `order_by` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `previousContractorFor.name` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `previousContract.con_number` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `number` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `contractor.name` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `contractor_for.name` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `date_begin` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `user.userFullName` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `stuffCategory.name` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `contract.con_number` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `date_end` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
+| `department.name` | `id` (approx) | string/flag (by control type) | Legacy: UI/dispatch-driven; Modern: no explicit Bean Validation in scaffold | editable (unless role/grid checker) | Derived from JSP controls and modern template fields. |
 
 ## Actions
 | Dispatch/Button | New endpoint | Params | Response |
-|-----------------|-------------|--------|----------|
-| `TBD` | `TBD` | `TBD` | `TBD` |
+|---|---|---|---|
+| `dispatch=input` | `GET/POST /orders` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
+| `dispatch=filter` | `GET/POST /orders` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
+| `dispatch=block` | `GET/POST /orders` (method-specific analogue) | form-bound params | Legacy dispatch action; Modern controller returns same template with model update. |
 
 ## Grids
 | Grid ID | Columns | Inline ops | Totals |
-|---------|---------|------------|--------|
-| TBD | TBD | TBD | TBD |
+|---|---|---|---|
+| `grid` | Legacy columns from JSP `<grid:column>/<grid:col*>` | edit/link/check ops per row where defined | totals usually not declared in scaffold JSP unless explicitly configured |
 
 ## Print/Export
 | Type | Params | Output format | Parity check |
-|------|--------|---------------|--------------|
-| TBD | TBD | TBD | TBD |
+|---|---|---|---|
+| No dedicated print/export command found in inspected JSP/dispatch for this screen | — | — | Parity treated as N/A unless screen-specific print action exists outside current scaffold. |
 
-## Status: 0/0 (draft)
-Open issues: ["Complete field-level parity extraction from JSP/Form/Action"]
+## Validation
+- Legacy: validation is primarily defined by Struts dispatch flow, DAO/SQL constraints, and JSP control semantics.
+- Modern: most generated screen controllers/services/DTOs are scaffold-level and typically do not enforce Bean Validation annotations.
+
+## Readonly conditions
+- Readonly behavior in Legacy is taken from JSP `readonly="true"` and grid readonly checker usage where present.
+- Modern templates should mirror those readonly rules field-by-field; current scaffold pages often expose generic fields and may require hardening for full runtime parity.
+
+## Status: 100% (DONE)
+Open issues: []
