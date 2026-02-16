@@ -12,14 +12,19 @@
     </parent>
 
     <groupId>net.sam</groupId>
-    <artifactId>dcl-4-modern</artifactId>
+    <artifactId>dcl-4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>dcl-4-modern</name>
-    <description>DCL-4 modernization scaffold</description>
+    <packaging>pom</packaging>
+    <name>dcl-4</name>
+    <description>DCL-4 parent (legacy + modern)</description>
 
     <properties>
         <java.version>17</java.version>
-        <start-class>src_modern.DclModernApplication</start-class>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <flyway.url>jdbc:postgresql://localhost:5432/dcl</flyway.url>
+        <flyway.user>dcl</flyway.user>
+        <flyway.password>dcl</flyway.password>
     </properties>
 
     <repositories>
@@ -32,7 +37,6 @@
             <url>https://repo1.maven.apache.org/maven2</url>
         </repository>
     </repositories>
-
     <pluginRepositories>
         <pluginRepository>
             <id>aliyun-plugins</id>
@@ -44,100 +48,7 @@
         </pluginRepository>
     </pluginRepositories>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration><mainClass>src_modern.DclModernApplication</mainClass></configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.6.0</version>
-                <executions>
-                    <execution>
-                        <id>add-modern-source</id>
-                        <phase>generate-sources</phase>
-                        <goals><goal>add-source</goal><goal>add-resource</goal></goals>
-                        <configuration>
-                            <sources><source>src_modern</source></sources>
-                            <resources><resource><directory>src_modern/resources</directory></resource></resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <includes>
-                        <include>net/sam/dcl/modern/**/*.java</include>
-                        <include>net/sam/dcl/config/SecurityConfig.java</include>
-                    </includes>
-                    <testIncludes>
-                        <testInclude>net/sam/dcl/modern/**/*.java</testInclude>
-                    </testIncludes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>modern</module>
+    </modules>
 </project>

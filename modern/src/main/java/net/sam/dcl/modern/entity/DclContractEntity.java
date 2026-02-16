@@ -1,0 +1,23 @@
+package net.sam.dcl.modern.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "dcl_contract")
+public class DclContractEntity {
+
+    @Id
+    @Column(name = "con_id")
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+}

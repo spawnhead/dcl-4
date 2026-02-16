@@ -3,7 +3,8 @@
 
 **Project:** https://github.com/spawnhead/dcl-4.git  
 **Mission:** Модернизировать Struts 1.x + JSP + Firebird → **Spring Boot MVC + Thymeleaf + PostgreSQL** с **100% функциональным parity** для каждого экрана по отдельности.  
-**Core rule:** Не ломать legacy до доказанной эквивалентности новой реализации. [web:145]
+**Core rule:** Не ломать legacy до доказанной эквивалентности новой реализации. [web:145]  
+**Порядок в проекте:** Всегда держать структуру папок и файлов в порядке; не добавлять сущности без надобности (подробнее: `.cursor/rules/project-order.mdc`).
 
 ---
 

@@ -1,0 +1,22 @@
+# Modern profile: same as default, explicit for -Dspring.profiles.active=modern
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/dcl}
+    username: ${SPRING_DATASOURCE_USERNAME:dcl}
+    password: ${SPRING_DATASOURCE_PASSWORD:dcl}
+  jpa:
+    hibernate:
+      # validate — после того как БД приведена в соответствие с миграциями (чистая БД + Flyway)
+      ddl-auto: update
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    out-of-order: true
+    validate-on-migrate: false
+  thymeleaf:
+    cache: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

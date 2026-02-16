@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Вход</title>
+    <style type="text/css">
+        body, table, td, input, button {
+            font-family: Tahoma, Arial, sans-serif;
+            font-size: 11px;
+            line-height: 13px;
+        }
+        body { margin: 2em; background: #f5f5f5; }
+        .formBack {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 1.5em;
+            margin: 2em auto;
+            max-width: 320px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        table.formTable { border-collapse: collapse; }
+        table.formTable td { padding: 4px 8px; }
+        .formSpace { height: 8px; }
+        input[type="text"], input[type="password"] { width: 180px; padding: 4px; }
+        button.primary { padding: 6px 16px; cursor: pointer; }
+        .error { color: #c00; font-size: 11px; margin-top: 4px; }
+        .message { color: #060; font-size: 11px; margin-top: 4px; }
+    </style>
+</head>
+<body>
+<div class="formBack">
+    <h2 style="margin-top:0;">Вход в систему</h2>
+    <form th:action="@{/login/process}" method="post">
+        <table class="formTable">
+            <tr>
+                <td><label for="usr_login">Логин</label></td>
+                <td><input type="text" id="usr_login" name="usr_login" autocomplete="username" required autofocus/></td>
+            </tr>
+            <tr>
+                <td><label for="usr_passwd">Пароль</label></td>
+                <td><input type="password" id="usr_passwd" name="usr_passwd" autocomplete="current-password" required/></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="formSpace">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <button type="submit" class="primary">Вход</button>
+                </td>
+            </tr>
+        </table>
+        <div th:if="${param.error != null}" class="error">Неверный логин или пароль.</div>
+        <div th:if="${errorMessage}" class="error" th:text="${errorMessage}">Ошибка</div>
+        <div th:if="${param.logout != null}" class="message">Вы вышли из системы.</div>
+        <div th:if="${message}" class="message" th:text="${message}">Сообщение</div>
+    </form>
+</div>
+</body>
+</html>

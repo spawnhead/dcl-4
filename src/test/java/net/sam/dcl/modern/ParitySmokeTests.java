@@ -42,7 +42,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 class ParitySmokeTests {
 
     private static final int INITIAL_SCREEN_LIMIT = 10;
-    private static final Path PARITY_DIR = Path.of("docs/parity");
+    private static final Path PARITY_DIR = Path.of("Docs/parity");
     private static final Path REPORT_PATH = Path.of("src/test/resources/reports/parity-smoke-latest.md");
 
     @Container
@@ -119,12 +119,10 @@ class ParitySmokeTests {
         }
 
         boolean passed = getStatus == 200 && (postStatus == 200 || postStatus == 302 || postStatus == 303 || postStatus == 405) && hasKeyFields;
-        if (!passed) {
-            note = "get=" + getStatus + ", post=" + postStatus + ", keyFields=" + hasKeyFields;
-        }
+        final String noteFinal = passed ? note : ("get=" + getStatus + ", post=" + postStatus + ", keyFields=" + hasKeyFields);
 
-        RESULTS.add(new ScreenResult(spec.slug(), spec.path(), getStatus, postStatus, passed, note));
-        assertTrue(passed, () -> "Smoke failed for " + spec.slug() + " :: " + note);
+        RESULTS.add(new ScreenResult(spec.slug(), spec.path(), getStatus, postStatus, passed, noteFinal));
+        assertTrue(passed, () -> "Smoke failed for " + spec.slug() + " :: " + noteFinal);
     }
 
     private boolean matchesKeyFields(Object dto, List<String> keyFields) {

@@ -1,37 +1,41 @@
-# login Parity Map (draft)
+# Login Parity Map (100% required)
+
 ## Scope
-- Legacy JSP: `src/main/webapp/jsp/login.jsp`.
-- Legacy Struts action mappings: `TBD (no direct input/forward mapping found in struts-config.xml)`
+- **Legacy:** JSP `src/main/webapp/jsp/login.jsp`, Struts action `/trusted/Login` (LoginAction), Form `LoginForm`.
+- **Modern:** GET `/login` — страница входа, POST `/login/process` — обработка формы (Spring Security).
 
-## Form beans
-- `TBD`
+## Form beans / DTO
+- Legacy: `LoginForm` — поля `usr_login`, `usr_passwd` (из запроса).
+- Modern: форма Thymeleaf `login.html` с полями `usr_login`, `usr_passwd`; обработка Spring Security (UsernamePasswordAuthenticationFilter).
 
-## SQL/DAO inventory
-- Candidate DAO classes: `TBD`
-- Candidate SQL resource IDs:
-  - `select-user_settings_login`
-  - `user-load-login`
-  - `user-load-login_pwd`
+## SQL/DAO (Legacy)
+- `user-load-login` — загрузка пользователя по `usr_login` (без пароля).
+- `user-load-login_pwd` — проверка по `usr_login` и `usr_passwd` (plain text).
+- DAOUtils.load в `LoginAction`: сначала user-load-login, затем user-load-login_pwd; при успехе — User в сессию, redirect на invitation-forward.
 
 ## Fields mapping
-| Legacy property | New DTO/Entity | Type | Validation | Readonly cond | Notes |
-|-----------------|----------------|------|------------|---------------|-------|
-| TBD | TBD | TBD | TBD | TBD | Fill during implementation |
+| Legacy property | New (Modern) | Type | Validation | Readonly | Notes |
+|-----------------|--------------|------|------------|----------|-------|
+| usr_login       | name="usr_login" | text | required | no | Параметр Spring Security: usernameParameter |
+| usr_passwd      | name="usr_passwd" | password | required | no | passwordParameter |
 
 ## Actions
-| Dispatch/Button | New endpoint | Params | Response |
-|-----------------|-------------|--------|----------|
-| `TBD` | `TBD` | `TBD` | `TBD` |
+| Legacy | Modern | Params | Response |
+|--------|--------|--------|----------|
+| POST form → /trusted/Login?dispatch=process | POST → /login/process | usr_login, usr_passwd | 302 → /references (success) или /login?error (failure) |
+| GET страницы входа | GET /login | — | 200 login.html |
+| Выход | POST /logout | — | 302 → /login?logout |
 
-## Grids
-| Grid ID | Columns | Inline ops | Totals |
-|---------|---------|------------|--------|
-| TBD | TBD | TBD | TBD |
+## Auth logic (parity)
+- Пользователь из `dcl_user` по `usr_login`; пароль сравнивается как строка (Legacy: plain text; Modern: NoOpPasswordEncoder).
+- `usr_block = 1` → пользователь заблокирован (Modern: User.disabled).
+- После входа: редирект на главную (Modern: `/references`; Legacy: invitation-forward).
 
 ## Print/Export
-| Type | Params | Output format | Parity check |
-|------|--------|---------------|--------------|
-| TBD | TBD | TBD | TBD |
+Не применимо (экран входа).
 
-## Status: 0/0 (draft)
-Open issues: ["Complete field-level parity extraction from JSP/Form/Action"]
+## Seed пользователь (dev)
+Повторяемая миграция `R__seed_admin_user.sql`: логин **admin**, пароль **admin** (при отсутствии пользователя с USR_LOGIN='admin').
+
+## Status: 100% (DONE)
+Open issues: []

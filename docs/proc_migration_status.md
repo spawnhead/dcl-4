@@ -2,7 +2,7 @@
 
 - Total procedures inventoried: **231**
 - Migrated/refactored: **231/231 ✅**
-- Legacy `EXECUTE PROCEDURE` in `src_modern/`: **0 hits (static grep)**
+- Legacy `EXECUTE PROCEDURE` in `modern/`: **0 hits (static grep)**
 
 ## SQL batches
 
