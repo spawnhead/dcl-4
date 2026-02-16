@@ -1,11 +1,11 @@
 # Parity Verify Status (163/163 scaffold)
 
 - Total screens (scaffold): **163**
-- Detailed verify docs: **5** (`commercial-proposal`, `orders`, `users`, `login`, `shipping`).
+- Detailed verify docs: **6** (`commercial-proposal`, `orders`, `users`, `login`, `shipping`, `action`).
 
 | Screen | Logic mapping | Verify doc | Status |
 |---|---|---|---|
-| `action` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/action.md` | Scaffold |
+| `action` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/action_verify.md` (+ `docs/parity/action.md`) | Detailed |
 | `action-roles` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/action-roles.md` | Scaffold |
 | `actions` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/actions.md` | Scaffold |
 | `adm-zone` | legacy Action/Form/SQL -> modern Controller/Service/DTO | `docs/parity/adm-zone.md` | Scaffold |
