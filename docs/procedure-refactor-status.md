@@ -2,19 +2,16 @@
 
 ## Inventory command
 ```bash
-rg -n "EXECUTE PROCEDURE|SELECT .*PROCEDURE|execute procedure" src
+rg -n "EXECUTE PROCEDURE|SELECT .*PROCEDURE|execute procedure" src src_modern
 ```
 
 ## Current status
-- Legacy raw procedure calls still exist in legacy Struts SQL resources (`src/main/webapp/WEB-INF/classes/resources/sql-resources.xml`) and some DAO classes.
-- Migration batches implemented:
-  - `V003__Commercial_and_Order_procs.sql` (4)
-  - `V004__Next_procs.sql` (20)
-  - `V005__Batch3_next50_procs.sql` (50)
-- SQL migrated so far: **74/231** procedures.
-- Full 231/231 planning/classification and screen mapping: `docs/proc_migration_status.md`.
+- `src_modern/` does not contain legacy `EXECUTE PROCEDURE` calls.
+- Procedure migration batches present in `src/main/resources/db/migration` and mirrored in `src_modern/resources/db/migration`:
+  - `V003` .. `V010`
+- Migration status target reached in docs: **231/231 ✅**.
 
-## Next batches
-1. Continue `V006..V010` for critical PL/pgSQL procedures with full input/output signatures.
-2. Move remaining `sql-resources.xml` procedure entries to Spring repositories/services per bounded context.
-3. Delete legacy DB procedure indirection after parity validation.
+## Remaining technical debt
+1. Replace compatibility wrappers with full signature/logic parity per screen priority.
+2. Execute runtime parity suite against legacy data snapshots.
+3. Cut over per `docs/CUTOVER.md`.

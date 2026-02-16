@@ -23,5 +23,5 @@
 20. timeboard
 
 ## Scaffold coverage
-- Existing parity scaffolds in `docs/parity/`: **163/163** entries.
-- Detailed verify docs completed in this batch: **5/20** (top priority set).
+- Full screen scaffold map: `docs/parity-verify-status.md` (**163/163**).
+- Existing parity scaffolds: `docs/parity/*.md`.

@@ -19,6 +19,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <start-class>src_modern.DclModernApplication</start-class>
     </properties>
 
     <repositories>
@@ -105,7 +106,25 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration><mainClass>src_modern.DclModernApplication</mainClass></configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <id>add-modern-source</id>
+                        <phase>generate-sources</phase>
+                        <goals><goal>add-source</goal><goal>add-resource</goal></goals>
+                        <configuration>
+                            <sources><source>src_modern</source></sources>
+                            <resources><resource><directory>src_modern/resources</directory></resource></resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

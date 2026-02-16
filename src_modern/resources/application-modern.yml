@@ -1,0 +1,8 @@
+spring:
+  config:
+    import: optional:classpath:application-prod.yml
+  profiles:
+    active: modern
+
+app:
+  mode: modern
